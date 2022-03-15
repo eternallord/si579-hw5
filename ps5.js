@@ -111,9 +111,11 @@ function addToSavedWords(word) {
     savedWords.innerHTML = savedWordsArray.join(', ');
 }
 
+savedWords.innerHTML = '(none)';
+
 function generatesavedbtn(word){
     btn = document.createElement("button");
-    btn.classList.add("btn", "btn-outline-success", "btn-sm");
+    btn.classList.add("btn", "btn-outline-success");
     btn.innerHTML = "(Save)";
     btn.addEventListener("click", () => addToSavedWords(word));
     return btn;
